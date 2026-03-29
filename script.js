@@ -35,22 +35,33 @@
 // BONUS: fai generare l'array all'utente tramite prompt. 
 // nel momento in cui l'utente scrive "SOMMA" restituisci in console o tramite alert la somma di tutti i valori inseriti dall'utente.
 
-let numeri = [];
-numeri = (prompt("Inserisci i numeri che vuoi sommare divisi da virgole:")).split(",");
-const azione = prompt("Scrivi 'SOMMA' per procedere:");
+// let numeri = [];
+// numeri = (prompt("Inserisci i numeri che vuoi sommare divisi da virgole:")).split(",");
+// const azione = prompt("Scrivi 'SOMMA' per procedere:");
 
 
-if (azione.toLowerCase() === "somma") {
-    let somma = 0
-    for (i in numeri) {
-        somma += parseInt(numeri[i]);
-    }
-    console.log(`La somma dei tuoi numeri è ${somma}`);
-}
+// if (azione.toLowerCase() === "somma") {
+//     let somma = 0
+//     for (i in numeri) {
+//         somma += parseInt(numeri[i]);
+//     }
+//     console.log(`La somma dei tuoi numeri è ${somma}`);
+// }
 
 
 
 // Dati due array, realizza uno script che mostri in console gli elementi comuni ai due array.
+const gruppo1 = ["giallo", "grigio", "nero", "rosso", "verde", "viola"];
+const gruppo2 = ["fucsia", "grigio", "arancione", "lilla", "rosso", "azzurro"];
+
+for (i in gruppo1) {
+    for (x in gruppo2) {
+        if (gruppo1[i] === gruppo2[x]) {
+            console.log(gruppo1[i]);
+            
+        }
+    }
+}
 
 // Dato un array scrivi uno script che conti la frequenza di un valore inserito dall'utente all'interno dell'array.
 
