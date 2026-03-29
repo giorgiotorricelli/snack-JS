@@ -51,19 +51,59 @@
 
 
 // Dati due array, realizza uno script che mostri in console gli elementi comuni ai due array.
-const gruppo1 = ["giallo", "grigio", "nero", "rosso", "verde", "viola"];
-const gruppo2 = ["fucsia", "grigio", "arancione", "lilla", "rosso", "azzurro"];
+// const gruppo1 = ["giallo", "grigio", "nero", "rosso", "verde", "viola"];
+// const gruppo2 = ["fucsia", "grigio", "arancione", "lilla", "rosso", "azzurro"];
 
-for (i in gruppo1) {
-    for (x in gruppo2) {
-        if (gruppo1[i] === gruppo2[x]) {
-            console.log(gruppo1[i]);
+// for (i in gruppo1) {
+//     for (x in gruppo2) {
+//         if (gruppo1[i] === gruppo2[x]) {
+//             console.log(gruppo1[i]);
             
+//         }
+//     }
+// }
+
+// Dato un array scrivi uno script che conti la frequenza di un valore inserito dall'utente all'interno dell'array.
+
+let dati = [];
+let datiContati = [];
+dati = (prompt("Inserisci degli elementi nel tuo array divisi da virgole:")).split(",");
+
+for (i in dati) {
+    dati.splice(i, 1, dati[i].trim()); //sostituisco il valoro senza spazi (trim) al valore con gli spazi
+}
+
+for (x in dati) {
+    let counter = 0;
+    for (y in dati) {
+        if (dati[x] === dati[y]) {
+            counter++;
         }
+    }
+
+    if (!datiContati.includes(dati[x])) { //se l'elemento non è già stato incluso nei dati contati
+        datiContati.push(dati[x]);
+        datiContati.push(counter);
+    }
+    
+}
+
+console.log(datiContati);
+
+for (let j = 0; j < datiContati.length; j++) {
+    if (typeof(datiContati[j]) === "string") {
+        console.log(`${datiContati[j]} appare ${datiContati[j + 1]} volte`);
     }
 }
 
-// Dato un array scrivi uno script che conti la frequenza di un valore inserito dall'utente all'interno dell'array.
+// ciao, ciao, bau, miao, ciao
+
+
+
+
+
+
+
 
 // Dato un array e un valore inserito dall'utente, restituisci due array, 
 // uno che include solo i valori differenti da quello definito e uno con tutte le occorrenze del valore definito.
