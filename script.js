@@ -1,22 +1,35 @@
 // Dato un array, fai in modo di trovare attraverso un for un valore specificato dall'utente. 
 // Restituisci come risposta un alert o console.log che dica se il valore esiste o meno
 
-const list = ["oro", "argento", "platino", "rame", "ferro", "diamante"]
-let rispostaUtente = prompt("Controlla se il metallo è nella lista:")
+// const list = ["oro", "argento", "platino", "rame", "ferro", "diamante"];
+// let rispostaUtente = prompt("Controlla se il metallo è nella lista:");
 
-for (i in list){
+// for (i in list){
     
-    if (rispostaUtente === list[i]) {
-        console.log(`${rispostaUtente} è nella lista.`);
-        break
-    } else if (parseInt(i) === list.length -1 && rispostaUtente !== list[i]) {
-        console.error(`${rispostaUtente} non è nella lista.`);
-    }
+//     if (rispostaUtente === list[i]) {
+//         console.log(`${rispostaUtente} è nella lista.`);
+//         break
+//     } else if (parseInt(i) === list.length -1 && rispostaUtente !== list[i]) {
+//         console.error(`${rispostaUtente} non è nella lista.`);
+//     }
     
-}
+// }
 
 // Dato un array, fai in modo di trovare attraverso un for un valore specificato dall'utente. 
 // Restituisci come risposta un alert o console.log che dica l'indice dell'elemento
+
+const valori = ["tonno", "carpa", "anguilla", "salmone", "trota"];
+let rispostaUtente = prompt("Controlla se il pesce è nella lista:");
+
+for (let i = 0; i < valori.length -1, valori[i -1] !== rispostaUtente; i++) { //ho utilizzato il for senza break
+    
+    if (rispostaUtente === valori[i]) {
+        console.log(`${rispostaUtente} è nella lista all'indice ${valori.indexOf(rispostaUtente)}`);
+    } 
+    
+
+}
+
 
 // Dato un array di numeri, scrivi il codice che effettua la somma di tutti i valori. 
 // BONUS: fai generare l'array all'utente tramite prompt. 
