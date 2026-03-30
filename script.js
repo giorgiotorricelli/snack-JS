@@ -65,48 +65,59 @@
 
 // Dato un array scrivi uno script che conti la frequenza di un valore inserito dall'utente all'interno dell'array.
 
-let dati = [];
-let datiContati = [];
-dati = (prompt("Inserisci degli elementi nel tuo array divisi da virgole:")).split(",");
+// let dati = [];
+// let datiContati = [];
+// dati = (prompt("Inserisci degli elementi nel tuo array divisi da virgole:")).split(",");
 
-for (i in dati) {
-    dati.splice(i, 1, dati[i].trim()); //sostituisco il valoro senza spazi (trim) al valore con gli spazi
-}
+// for (i in dati) {
+//     dati.splice(i, 1, dati[i].trim()); //sostituisco il valoro senza spazi (trim) al valore con gli spazi
+// }
 
-for (x in dati) {
-    let counter = 0;
-    for (y in dati) {
-        if (dati[x] === dati[y]) {
-            counter++;
-        }
-    }
+// for (x in dati) {
+//     let counter = 0;
+//     for (y in dati) {
+//         if (dati[x] === dati[y]) {
+//             counter++;
+//         }
+//     }
 
-    if (!datiContati.includes(dati[x])) { //se l'elemento non è già stato incluso nei dati contati
-        datiContati.push(dati[x]);
-        datiContati.push(counter);
-    }
+//     if (!datiContati.includes(dati[x])) { //se l'elemento non è già stato incluso nei dati contati
+//         datiContati.push(dati[x]);
+//         datiContati.push(counter);
+//     }
     
-}
+// }
 
-console.log(datiContati);
+// console.log(datiContati);
 
-for (let j = 0; j < datiContati.length; j++) {
-    if (typeof(datiContati[j]) === "string") {
-        console.log(`${datiContati[j]} appare ${datiContati[j + 1]} volte`);
-    }
-}
+// for (let j = 0; j < datiContati.length; j++) {
+//     if (typeof(datiContati[j]) === "string") {
+//         console.log(`${datiContati[j]} appare ${datiContati[j + 1]} volte`);
+//     }
+// }
 
 // ciao, ciao, bau, miao, ciao
 
-
-
-
-
-
-
-
 // Dato un array e un valore inserito dall'utente, restituisci due array, 
 // uno che include solo i valori differenti da quello definito e uno con tutte le occorrenze del valore definito.
+
+const numbers = [1, 2, 3, 1, 7, 8, 1, 2];
+
+const erasedNumbers = [];
+let valoreUser = prompt("Inserisci un valore:");
+
+for (let i = 0; i < numbers.length; i++) {
+    
+    if (Number(valoreUser) === numbers[i] ) {
+        erasedNumbers.push(Number(valoreUser));
+        numbers.splice(i, 1);
+    }
+}
+
+console.log(numbers);
+console.log(erasedNumbers);
+
+
 
 // Dato un array, scrivi lo script che restituisca in console qual è il valore più comune all'interno dell'array
 
